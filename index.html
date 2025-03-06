@@ -1,35 +1,93 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-const CrestviewSchool = () => { return (
-<div className='p-6 bg-gray-100 min-h-screen'>
-<header className='flex justify-between items-center py-4 bg-green-700 text-white px-6 shadow-lg'>
-<h1 className='text-2xl font-bold'>Crestview School</h1> <nav>
-<ul className='flex gap-4'>
-<li><a href='#about' className='hover:underline hover:text-green-300'>About</a></li>
-<li><a href='#admissions' className='hover:underline hover:text-green-300'>Admissions</a></li> <li><a href='#contact' className='hover:underline hover:text-green-300'>Contact</a></li>
-</ul> </nav>
-</header>
-<main className='mt-8 grid gap-6'> <section id='about'>
-<Card> <CardContent>
-<h2 className='text-xl font-semibold mb-2'>About Crestview School</h2>
-<img src='https://source.unsplash.com/featured/?african,culture' alt='African Culture' className='w-full h-40 object-cover mb-4 rounded-xl' /> <p>Crestview School is dedicated to providing quality education and fostering a vibrant learning community.</p>
-</CardContent> </Card>
-</section>
-<section id='admissions'> <Card className='transition-transform transform hover:scale-105 hover:shadow-lg'>
-<CardContent>
-<h2 className='text-xl font-semibold mb-2'>Admissions</h2>
-<img src='https://source.unsplash.com/featured/?african,students' alt='African Students' className='w-full h-40 object-cover mb-4 rounded-xl' /> <p>Learn more about our admission process and how to enroll at Crestview School.</p>
-<Button className='mt-4 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg'>Apply Now</Button>
-</CardContent> </Card>
-</section>
-<section id='contact'> <Card>
-<CardContent>
-<h2 className='text-xl font-semibold mb-2'>Contact Us</h2>
-<img src='https://source.unsplash.com/featured/?african,community' alt='African Community' className='w-full h-40 object-cover mb-4 rounded-xl' /> <p>Have questions? Reach out to our team for more information.</p>
-<Button className='mt-4'>Get in Touch</Button>
-</CardContent> </Card>
-</section> </main>
-</div> );
-};
-export default CrestviewSchool;
+</head>
+<style>
+  /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #38a169; /* Green */
+    color: white;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+/* Button Styles */
+button {
+    background-color: #38a169; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f855a; /* Darker Green */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .flex {
+        flex-direction: column;
+    }
+}
+
+</style>
+<body>
+    <div class="p-6 bg-gray-100 min-h-screen">
+        <header class="flex justify-between items-center py-4 bg-green-700 text-white px-6 shadow-lg">
+            <h1 class="text-2xl font-bold">Crestview School</h1>
+            <nav>
+                <ul class="flex gap-4">
+                    <li><a href="#about" class="hover:underline hover:text-green-300">About</a></li>
+                    <li><a href="#admissions" class="hover:underline hover:text-green-300">Admissions</a></li>
+                    <li><a href="#contact" class="hover:underline hover:text-green-300">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="mt-8 grid gap-6">
+            <section id="about">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="text-xl font-semibold mb-2">About Crestview School</h2>
+                        <img src="https://source.unsplash.com/featured/?african,culture" alt="African Culture" class="w-full h-40 object-cover mb-4 rounded-xl" />
+                        <p>Crestview School is dedicated to providing quality education and fostering a vibrant learning community.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="admissions">
+                <div class="card transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <div class="card-content">
+                        <h2 class="text-xl font-semibold mb-2">Admissions</h2>
+                        <img src="https://source.unsplash.com/featured/?african,students" alt="African Students" class="w-full h-40 object-cover mb-4 rounded-xl" />
+                        <p>Learn more about our admission process and how to enroll at Crestview School.</p>
+                        <button class="mt-4 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg">Apply Now</button>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+                        <img src="https://source.unsplash.com/featured/?african,community" alt="African Community" class="w-full h-40 object-cover mb-4 rounded-xl" />
+                        <p>Have questions? Reach out to our team for more information.</p>
+                        <button class="mt-4">Get in Touch</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
